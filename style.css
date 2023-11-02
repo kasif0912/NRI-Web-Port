@@ -27,6 +27,7 @@ body {
 .content span {
   line-height: 1.8;
   font-size: 2.5em;
+  font-weight: bolder;
 }
 .content p {
   opacity: 0.9;
@@ -111,6 +112,7 @@ span {
   .content span {
     font-size: 30px;
     font-weight: 400;
+    font-weight: bolder;
   }
   .btn {
     width: 60%; /* Adjust the width for smaller screens */
@@ -135,9 +137,13 @@ span {
     padding: 2px;
   }
 }
-
-@media (max-width: 412px) {
+@media (max-width: 422px) {
     .members{
-        margin-top: 55%;
+        margin-top: 60%;
+    }
+}
+@media (max-width: 380px) {
+    .members{
+        margin-top: 30%;
     }
 }
