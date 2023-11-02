@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+body {
+  /* background: rgb(31, 71, 85); */
+  background: url(./assets/lp.png);
+  background-size: cover; /* Adjust this as needed */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* This keeps the image fixed while scrolling */
+  background-position: center;
+}
+.content {
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+  text-transform: uppercase;
+  width: 35vw;
+  margin: auto;
+  line-height: 1;
+  margin-top: 5%;
+}
+.content span {
+  line-height: 1.8;
+  font-size: 2.5em;
+}
+.content p {
+  opacity: 0.9;
+}
+.btn {
+  background-color: #3498db;
+  /* color: #fff; */
+  padding: 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  width: 20%;
+  margin: auto;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  border: none;
+}
+.btn a {
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  color: white;
+  width: 100%;
+}
+.members {
+  margin-top: 58px;
+  background: rgb(17, 34, 88);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.members h3 {
+  padding: 20px;
+  color: white;
+  opacity: 0.8;
+}
+.members h4 {
+  padding: 15px;
+  color: white;
+  opacity: 0.7;
+}
+.connect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(23, 29, 81);
+  height: 20vh;
+  text-align: center;
+  color: white;
+  opacity: 0.8;
+}
+
+@keyframes textAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+span {
+  display: inline-block;
+  animation: textAnimation 1s ease-in-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    padding: 10%;
+    text-align: start;
+    width: 100%;
+  }
+  .content h2 {
+    line-height: 1.5;
+  }
+  .content span {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .btn {
+    width: 60%; /* Adjust the width for smaller screens */
+    font-size: 20px; /* Adjust the font size for smaller screens */
+  }
+  .members {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20%;
+    padding: 10px;
+  }
+
+  .members h3 {
+    font-size: 18px; /* Adjust the font size for smaller screens */
+    padding: 5px;
+  }
+  .members h4 {
+    text-align: start;
+    opacity: 0.6;
+    color: white;
+    line-height: 1.5;
+    padding: 2px;
+  }
+}
+
+@media (max-width: 412px) {
+    .members{
+        margin-top: 55%;
+    }
+}
