@@ -15,7 +15,7 @@ body {
   background-position: center;
 }
 .content {
-  color: #fff;
+  color: #030000;
   text-align: center;
   padding: 50px;
   text-transform: uppercase;
@@ -33,25 +33,48 @@ body {
   opacity: 0.9;
 }
 .btn {
-  background-color: #3498db;
-  /* color: #fff; */
-  padding: 10px 10px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 25px;
-  width: 20%;
-  margin: auto;
-  transition: background-color 0.3s;
-  cursor: pointer;
-  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-.btn a {
-  text-align: center;
-  text-decoration: none;
+.download-button-container {
+  margin-bottom: 10px;
+  margin: 0 10px;
+}
+
+.download-button {
   display: block;
-  color: white;
-  width: 100%;
+  background-color: #0074d9;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.small-button {
+  display: block;
+  background-color: #0074d9;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px; /* Smaller padding */
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.large-button {
+  display: block;
+  background-color: #0074d9;
+  color: #fff;
+  text-align: center;
+  padding: 20px 30px; /* Larger padding */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
 }
 .members {
   margin-top: 58px;
@@ -114,10 +137,32 @@ span {
     font-weight: 400;
     font-weight: bolder;
   }
-  .btn {
-    width: 60%; /* Adjust the width for smaller screens */
-    font-size: 20px; /* Adjust the font size for smaller screens */
+  
+  @media (max-width: 768px) {
+    .small-button, .large-button {
+        padding: 8px 16px; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+  .btn{
+    display: flex;
+    flex-direction: column;
   }
+    .btn-container {
+        flex-direction: column; /* Stack buttons on smaller screens */
+    }
+
+    .download-button-container {
+        margin: 10px 0; /* Adjust vertical spacing */
+    }
+
+    .large-button {
+        padding: 25px 25px; 
+        font-size: larger;
+        width: 100%;
+    }
+}
   .members {
     display: flex;
     flex-direction: column;
@@ -138,12 +183,12 @@ span {
   }
 }
 @media (max-width: 422px) {
-    .members{
-        margin-top: 60%;
-    }
+  .members {
+    margin-top: 60%;
+  }
 }
 @media (max-width: 380px) {
-    .members{
-        margin-top: 30%;
-    }
+  .members {
+    margin-top: 30%;
+  }
 }
